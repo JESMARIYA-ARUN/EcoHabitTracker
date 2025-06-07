@@ -1,0 +1,256 @@
+/* CSS Variables for colors and fonts */
+:root {
+  --primary-green: #2e7d32;
+  --secondary-green: #66bb6a;
+  --light-green: #e8f5e9;
+  --text-dark: #1b1b1b;
+  --background: #f7f9f7;
+  --accent-color: #ffa726;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global reset and box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+
+/* Main content container */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Sections styling */
+section {
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Section headings */
+h2 {
+  color: var(--primary-green);
+  margin-top: 0;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+label {
+  flex: 1 1 150px;
+  font-weight: 600;
+}
+
+select, input[type="date"] {
+  flex: 2 1 200px;
+  padding: 0.4rem;
+  border: 1px solid var(--secondary-green);
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 0 1 auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--secondary-green);
+  outline: none;
+}
+
+/* Habit list container */
+#habit-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid var(--secondary-green);
+  padding-top: 1rem;
+}
+
+/* Each logged habit entry */
+.habit-entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--light-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.habit-entry span {
+  font-weight: 600;
+}
+
+/* Progress bar container */
+.progress-bar-container {
+  background-color: var(--light-green);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Progress bar itself */
+.progress-bar {
+  height: 20px;
+  background-color: var(--secondary-green);
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+/* Badge container */
+#badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Badge style */
+.badge {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Eco tips filter input */
+#tip-filter {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--secondary-green);
+  border-radius: 4px;
+}
+
+/* Tips list */
+#tips-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-green);
+  color: white;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+/* Add Habit Section */
+.add-habit-section {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.add-habit-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.add-habit-input input[type="text"] {
+  flex: 2 1 200px;
+  padding: 0.4rem;
+  border: 1px solid var(--secondary-green);
+  border-radius: 4px;
+}
+
+.add-habit-input button {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.add-habit-input button:hover,
+.add-habit-input button:focus {
+  background-color: var(--secondary-green);
+  outline: none;
+}
+
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  label, select, input[type="date"], button {
+    flex: 1 1 100%;
+  }
+}

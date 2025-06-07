@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoHabits - Your Personal Environmental Tracker</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>EcoHabits</h1>
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#tracker">Habit Tracker</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#tips">Eco Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Intro section -->
+    <section id="intro">
+      <h2>Welcome to EcoHabits</h2>
+      <p>Track your daily eco-friendly habits and see your progress towards a greener lifestyle!</p>
+    </section>
+
+    <!-- Habit Tracker form -->
+    <section id="tracker">
+      <h2>Habit Tracker</h2>
+      <form id="habit-form">
+<div class="add-habit-section">
+  <label for="new-habit">Add New Habit:</label>
+  <div class="add-habit-input">
+    <input type="text" id="new-habit" placeholder="Enter new habit" />
+    <button type="button" id="add-habit-btn">Add Habit</button>
+  </div>
+</div>
+
+<label for="habit-name">Select Habit:</label>
+<select id="habit-name" required>
+  <option value="" disabled selected>Select a habit</option>
+  <option value="Recycle">Recycle</option>
+  <option value="Use Reusable Bags">Use Reusable Bags</option>
+  <option value="Save Water">Save Water</option>
+  <option value="Bike Instead of Drive">Bike Instead of Drive</option>
+</select>
+
+
+        <label for="habit-date">Date:</label>
+        <input type="date" id="habit-date" required />
+        <button type="submit">Log Habit</button>
+      </form>
+      <!-- Container to show logged habits -->
+      <div id="habit-list" aria-live="polite" aria-label="Logged habits"></div>
+    </section>
+
+    <!-- Progress dashboard -->
+    <section id="dashboard">
+      <h2>Progress Dashboard</h2>
+      <div id="progress-bars" aria-label="Progress bars for habits"></div>
+      <div id="badges" aria-label="Earned badges"></div>
+    </section>
+
+    <!-- Eco tips with filter input -->
+   <section id="tips">
+  <h2>Eco Tips</h2>
+
+  <!-- New Tip Input -->
+  <form id="tip-form">
+    <input type="text" id="new-tip" placeholder="Add a new eco tip..." aria-label="Add a new eco tip" required />
+    <button type="submit">Add Tip</button>
+  </form>
+
+  <!-- Filter Input -->
+  <input type="text" id="tip-filter" placeholder="Filter tips..." aria-label="Filter eco tips" />
+
+  <!-- Tip List -->
+  <ul id="tips-list">
+    <li>Turn off lights when not in use.</li>
+    <li>Use a reusable water bottle.</li>
+    <li>Compost kitchen scraps.</li>
+    <li>Take shorter showers.</li>
+    <li>Plant native trees or flowers.</li>
+  </ul>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoHabits. Promoting sustainable living.</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
